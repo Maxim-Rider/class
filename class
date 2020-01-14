@@ -5,7 +5,7 @@ class Student():
     nationality= ''
     age= ''
     citizenship= ''
-    
+
     def __init__ (self, n,c,b,a,d):
         self.name= n
         self.color= c
@@ -24,6 +24,29 @@ class Student():
 class Maxim(Student):
         print('\n'
             'Информация о ученике:')
+        
+class Student2():
+    name=''
+    color=''
+    nationality=''
+    age=''
+    citizenship=''
+    
+    def __init__(self,n,c,b,a,d):
+        self.name= n
+        self.color= c
+        self.nationality= b
+        self.age= a
+        self.perks=[]
+        self.citizenship= d
+        
+    def addPerks(self,perk_type):
+        self.perks.append(perk_type)
+         
+    def showPerks(self):
+        return self.perks
+
+
 
 max1=Maxim('Максим', 'Белый', 'Русский европеец', '18 лет', 'Эстонское')
 max1.addPerks('Программирование')
@@ -35,3 +58,19 @@ print('\n'
       f'Возраст: {max1.age} \n'
       f'Умения: {max1.showPerks()} \n'
       f'Гражданство: {max1.citizenship}')
+
+class Dan(Student2):
+        print('\n'
+                '\n'
+            'Информация о ученике:')
+
+dan1=Dan('Dan', 'Тёмнокожий', 'Американец', '20 лет', 'Американское')
+dan1.addPerks('Сила')
+
+print('\n'
+      f'Имя: {dan1.name} \n'
+      f'Цвет кожи: {dan1.color} \n'
+      f'Национальность: {dan1.nationality} \n'
+      f'Возраст: {dan1.age} \n'
+      f'Умения: {dan1.showPerks()} \n'
+      f'Гражданство: {dan1.citizenship}')
